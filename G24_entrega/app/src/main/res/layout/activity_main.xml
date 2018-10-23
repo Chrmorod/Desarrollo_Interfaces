@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <!---Button White/Red Background-->
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/fblanco"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/frojo"
+        />
+    <!---Button Black/Red Text-->
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Letras Negras"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_below="@id/frojo"
+        android:id="@+id/lnegras"
+        />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp">
+            <!---Radio Group-->
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/rdgroup">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10%"
+                    android:id="@+id/rd10"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20%"
+                    android:id="@+id/rd20"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30%"
+                    android:id="@+id/rd30"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40%"
+                    android:id="@+id/rd40"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50%"
+                    android:id="@+id/rd50"
+                    />
+            </RadioGroup>
+            <!---Show the text when check the box-->
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rdgroup"
+                android:text="Mostrar"
+                android:id="@+id/ckb"/>
+            <!---Text appear or disappear // initial-> visibility=gone-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Este es el mensaje oculto"
+                android:layout_marginLeft="100dp"
+                android:layout_alignBaseline="@+id/ckb"
+                android:id="@+id/msgOculto"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp">
+            <!---LongClick in this text appear a msg-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Haz aqui un click Largo"
+                android:layout_marginBottom="20dp"
+                android:textSize="25sp"
+                android:id="@+id/txtclicklargo"/>
+            <!---Background Layout will be changed-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lysquare"
+                android:layout_below="@+id/txtclicklargo">
+                <!---StarBar-->
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/rating_bar"/>
+                <!---Counter of starts-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[0/5]"
+                    android:layout_below="@+id/rating_bar"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/count"/>
+            </RelativeLayout>
+        </RelativeLayout>
+</LinearLayout>

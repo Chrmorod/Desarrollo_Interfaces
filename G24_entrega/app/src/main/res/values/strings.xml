@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Actividad_views</string>
+    <string name="frojo">Fondo Rojo</string>
+    <string name="fblanco">Fondo Blanco</string>
+    <string name="lrojas">Letras Rojas</string>
+    <string name="lnegras">Letras Negras</string>
+    <string name="msgclicklong">Has pulsado durante un tiempo</string>
+</resources>
