@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <PreferenceCategory
+        android:title="Uso de datos">
+
+    <CheckBoxPreference
+        android:key="pref_sync"
+        android:title="Eliminar mensajes antiguos"
+        android:summary="Elimina los mensajes una vez se ha alcanzado el limite de mensajes."
+        android:defaultValue="true"/>
+    <EditTextPreference
+        android:key="pref_editText"
+        android:title="Limite de Caracteres"
+        android:summary="Limita los mensajes a una cantidad determinada de caracteres"
+        />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Ajustes de Operador">
+        <SwitchPreference
+            android:key="pref_switch"
+            android:title="Usar datos moviles"
+            android:summary="Se aplicarán tarifas del operador"
+            android:defaultValue="true" />
+        <ListPreference
+            android:dependency="pref_switch"
+            android:key="pref_operador"
+            android:title="Operador"
+            android:summary="Selecciona el operador de nuestra lista de colaboradores"
+            android:dialogTitle="Operadores: "
+            android:entries="@array/listentries"
+            android:entryValues="@array/listvalues"
+            android:defaultValue="Movistar"/>
+    </PreferenceCategory>
+</PreferenceScreen>

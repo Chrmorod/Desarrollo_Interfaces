@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item
+        android:id="@+id/verdatos_menu"
+        android:title="Ver datos"></item>
+    <item
+        android:id="@+id/ajustes_menu"
+        android:title="Ajustes"></item>
+    <item
+        android:id="@+id/ayuda_menu"
+        android:title="Ayuda"></item>
+</menu>
